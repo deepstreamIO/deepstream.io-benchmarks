@@ -22,3 +22,21 @@ Test case | Socket.IO 1.5.1 | Deepstream.IO v2.0 | Multiplier
 100 sub, 10 pub | 27.5 ms | 1.6 ms | 17x
 1000 sub, 100 pub | 2303.8 ms | 15.5 ms | 153x
 10000 sub, 1000 pub | 274335.6 ms | 206.5 ms | 1331x
+
+#### Validation
+All benchmarks and the used server solutions are open source and openly available for inspection. Both benchmarking clients are written in C++11 with µWS as a dependency to really stress the servers 100% at all points in time. To compile the two benchmarks you first need to compile and install µWS. You will need to run something like this to get it compiling (Ubuntu 16.04):
+
+```
+sudo apt update
+sudo apt -y install libz-dev libssl-dev libuv1-dev g++ make
+git clone https://github.com/uWebSockets/uWebSockets.git && cd uWebSockets
+make
+sudo make install
+cd ..
+```
+
+and then compile the benchmarks with
+
+```
+make
+```
