@@ -15,3 +15,18 @@ In this benchmark we are going to investigate the time spent while propagating X
   * Store time delay
 * Print average delay for these 10 iterations
 
+#### Results
+Test case | Socket.IO 1.5.4 | Deepstream.IO v2.0
+--- | --- | ---
+10 subscribed clients, 1 publication per iteration | 0 | 0
+10 subscribed clients, 10 publication per iteration | 0 | 0
+10 subscribed clients, 100 publication per iteration | 0 | 0
+10 subscribed clients, 1000 publication per iteration | 0 | 0
+100 subscribed clients, 1 publication per iteration | 0 | 0
+100 subscribed clients, 10 publication per iteration | 0 | 0
+100 subscribed clients, 100 publication per iteration | 0 | 0
+100 subscribed clients, 1000 publication per iteration | 0 | 0
+1000 subscribed clients, 1 publication per iteration | 0 | 0
+1000 subscribed clients, 10 publication per iteration | 0 | 0
+1000 subscribed clients, 100 publication per iteration | 0 | 0
+1000 subscribed clients, 1000 publication per iteration | 0 | 0
