@@ -16,17 +16,9 @@ In this benchmark we are going to investigate the time spent while propagating X
 * Print average delay for these 10 iterations
 
 #### Results
-Test case | Socket.IO 1.5.1 | Deepstream.IO v2.0
---- | --- | ---
-10 subscribed clients, 1 publication per iteration | 0 | 0
-10 subscribed clients, 10 publication per iteration | 0 | 0
-10 subscribed clients, 100 publication per iteration | 0 | 0
-10 subscribed clients, 1000 publication per iteration | 0 | 0
-100 subscribed clients, 1 publication per iteration | 0 | 0
-100 subscribed clients, 10 publication per iteration | 0 | 0
-100 subscribed clients, 100 publication per iteration | 0 | 0
-100 subscribed clients, 1000 publication per iteration | 0 | 0
-1000 subscribed clients, 1 publication per iteration | 0 | 0
-1000 subscribed clients, 10 publication per iteration | 0 | 0
-1000 subscribed clients, 100 publication per iteration | 0 | 0
-1000 subscribed clients, 1000 publication per iteration | 0 | 0
+Test case | Socket.IO 1.5.1 | Deepstream.IO v2.0 | Multiplier
+--- | --- | --- | ---
+10 sub, 1 pub | 0.3 ms | 1.3 ms | 0.23x
+100 sub, 10 pub | 27.5 ms | 1.6 ms | 17x
+1000 sub, 100 pub | 2303.8 ms | 15.5 ms | 153x
+10000 sub, 1000 pub | 274335.6 ms | 206.5 ms | 1331x
