@@ -1,10 +1,11 @@
 #!/bin/bash
 connections_steps=( 10 100 1000 10000 )
-publishes_steps=( 1 10 100 1000 10000 )
+publishes_steps=( 10 2 )
+echo "pub,sub,latency"
 for connections in "${connections_steps[@]}"
 do
 	for publishes in "${publishes_steps[@]}"
 	do
-		./eventBenchmark ${connections} ${publishes}
+		./eventBenchmark $connections $(($connections/$publishes)) $1 $2
 	done
 done
